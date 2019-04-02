@@ -30,9 +30,11 @@ public class BootReceiver extends BroadcastReceiver {
     };
     @Override
     public void onReceive(Context context, Intent intent) {
-        Log.d("MyBootReceiver", "onReceive: "+"~~~~~~~~~~~~~~~~~~~~~~~");
-        Intent intentStart = new Intent(context, MyService.class);
-        context.startService(intentStart);
+        if (intent.getAction().equals("android.intent.action.BOOT_COMPLETED")){
+            Log.d("MyBootReceiver", "onReceive: "+"~~~~~~~~~~~~~~~~~~~~~~~");
+            Intent intentStart = new Intent(context, MyService.class);
+            context.startService(intentStart);
 //        context.bindService(intentStart, connect, BIND_AUTO_CREATE);
+        }
     }
 }

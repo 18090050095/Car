@@ -28,7 +28,7 @@
         </activity>
 
         <receiver android:name="com.pvetec.cpucontroller.BootReceiver">
-            <intent-filter android:priority="1000">
+            <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
