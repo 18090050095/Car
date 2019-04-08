@@ -1,0 +1,11 @@
+指示器导入：
+1.allprojects {
+      repositories {
+          google()
+          jcenter()
+          maven { url 'https://jitpack.io' }//新增
+      }
+  }
+
+2.implementation 'com.github.pinguo-zhouwei:CircleIndicatorView:v1.0.1'
+
