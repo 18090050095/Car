@@ -33,6 +33,12 @@ public class CommonViewPagerAdapter extends PagerAdapter {
         return view == o;
     }
 
+    /**
+     * 预加载，首次进入默认加载两次
+     * @param container 当前的ViewPager对象
+     * @param position
+     * @return
+     */
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         //重点就在这儿了，不再是把布局写死，而是用接口提供的布局
